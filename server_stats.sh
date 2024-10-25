@@ -9,7 +9,7 @@ echo ""
 free --mega | grep Mem: | awk '{
     used_percent = (($2 - $7) / $2) * 100;
     free_percent = ($7 / $2) * 100;
-    printf "Memory:\n\tUsed: %sMB\n\tFree: %sMB\n\tPercent Used: %.2f%%\n\tPercent Free: %.2f%%\n", $3, $4, used_percent, free_percent
+    printf "Memory:\n\tPercent Used: %.2f%%\n\tPercent Free: %.2f%%\n\tUsed: %sMB\n\tFree: %sMB\n", used_percent, free_percent, $3, $4
 }'
 echo ""
 
